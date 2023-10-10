@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Iso&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #1c1919;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #1c1919;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d62929;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1919;
+  padding: 10px 20px;
+}
+
+.logo h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+}
+.logo h2 span {
+  color: #e40303;
+  font-size: 2rem;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  color: #e40303;
+  font-size: 1.2rem;
+}
+
+.search-bar .search-button {
+  background-color: transparent;
+  color: #e40303;
+  border: solid 1px #e40303;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+.search-bar .search-button:hover {
+  background-color: #e40303;
+  color: #fff;
+  border: solid 1px transparent;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.nav-links a:hover {
+  color: #e40303;
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+}
+
+.cart-count {
+  position: absolute;
+  top: -15px;
+  right: -8px;
+  background-color: #e40303;
+  color: #fff;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+  display: none;
+  font-family: "Poppins", sans-serif;
+}
+/* ______________________________________________________________ */
+main {
+  max-width: 100%;
+  max-height: 100vh;
+  position: relative;
+}
+main .mySlides {
+  min-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+main .logo {
+  position: absolute;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00000090;
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  padding: 15px;
+  height: 100px;
+}
+main .logo h2 {
+  color: #fff;
+  font-size: 7rem;
+  font-family: "Dancing Script", cursive;
+  line-height: 0.3;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+main .logo h2 span {
+  color: #e40303;
+  font-size: 9rem;
+}
+/* _____________________________________________________________ */
+#books {
+  background-color: #1c1919;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booksTitle h2 {
+  font-size: 5rem;
+  text-align: center;
+  color: #d5d5d5;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 50px;
+}
+.booksTitle h2 span {
+  color: #e40303;
+}
+
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 25px;
+  gap: 50px;
+  padding: 50px;
+  width: 80%;
+  background-color: #242020;
+  overflow-y: scroll;
+  max-height: 700px;
+}
+.product-section::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #1c1919;
+}
+
+.product-section::-webkit-scrollbar {
+  width: 12px;
+  background-color: #1c1919;
+  border-radius: 10px;
+}
+
+.product-section::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d62929;
+}
+
+.product-card {
+  text-align: center;
+  background-color: #d5d5d5;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 8px 8px 30px #e403034b;
+  width: 300px;
+  min-height: 525px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.product-card img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.authors {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #410303;
+  font-family: "Dancing Script", cursive;
+}
+
+.Btns {
+  background-color: transparent;
+  border: 1px solid #e40303;
+  color: #e40303;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.Btns:hover {
+  background-color: #e40303;
+  border: 1px solid transparent;
+  color: #fff;
+}
+.BtnsDiv {
+  display: flex;
+  justify-self: end;
+  margin-top: auto;
+}
+
+/* ___________________________________________________________________ */
+
+footer {
+  background-color: #242020;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+}
+.footer-logo h3 span {
+  color: #e40303;
+  font-size: 3rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 16px;
+  transition: color 0.3s;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-links a:hover {
+  color: #e40303;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #e40303;
+}
+
+.footer-description {
+  font-size: 16px;
+  margin: 50px;
+  color: #555;
+  font-family: "Poppins", sans-serif;
+}
+.footer-description span {
+  color: #e40303;
+  font-size: 19px;
+}

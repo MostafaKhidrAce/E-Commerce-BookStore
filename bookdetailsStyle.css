@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Iso&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1c1919;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #1c1919;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #1c1919;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d62929;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1919;
+  padding: 10px 20px;
+}
+
+.logo h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+}
+.logo h2 span {
+  color: #e40303;
+  font-size: 3rem;
+}
+
+.nav-links {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.nav-links a:hover {
+  color: #e40303;
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+}
+
+.cart-count {
+  position: absolute;
+  top: -15px;
+  right: -8px;
+  background-color: #e40303;
+  color: #fff;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+  display: none;
+}
+/* _______________________________________________________________________ */
+
+#book-details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;
+  align-items: center; */
+  padding: 50px;
+  margin: 100px auto;
+  background-color: #252323;
+  width: 80%;
+  min-height: calc(100vh - 90px);
+  border-radius: 25px;
+  color: #fff;
+}
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.book-image {
+  width: 50%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 25px;
+  margin-bottom: auto;
+}
+
+.book-image img {
+  max-width: 200px;
+  height: auto;
+  margin-right: 20px;
+  box-shadow: 7px 6px 12px rgb(35 35 35 / 49%);
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40%;
+  min-height: 250px;
+  font-family: "Poppins", sans-serif;
+}
+
+.book-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Dancing Script", cursive;
+}
+
+.book-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-meta {
+  font-size: 14px;
+}
+
+.author,
+.publisher,
+.published-date {
+  margin: 10px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: #e40303;
+}
+.publisher span,
+.published-date span {
+  color: #fff;
+}
+
+.authors {
+  font-family: "Dancing Script", cursive;
+  list-style: none;
+  font-size: 1.5rem;
+}
+/* __________________________________________________________________________ */
+footer {
+  background-color: #242020;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+}
+.footer-logo h3 span {
+  color: #e40303;
+  font-size: 3rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 16px;
+  transition: color 0.3s;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-links a:hover {
+  color: #e40303;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #e40303;
+}
+
+.footer-description {
+  font-size: 16px;
+  margin: 50px;
+  color: #555;
+  font-family: "Poppins", sans-serif;
+}
+.footer-description span {
+  color: #e40303;
+  font-size: 19px;
+}
